@@ -6,27 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/show_count"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:background="#FFFF00"
-        android:gravity="center"
-        android:text="@string/zero"
-        android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
-        android:textSize="160sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_toast"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button_toast"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -37,19 +19,35 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/show_count"
+        android:layout_width="0dp"
+        android:layout_height="259dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="#FFFF00"
+        android:gravity="center"
+        android:text="@string/zero"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="120sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/button_count"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Button
         android:id="@+id/button_count"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
         android:background="@color/colorPrimary"
         android:onClick="countUp"
         android:text="@string/count_text"
         android:textColor="@android:color/white"
         app:layout_constraintBaseline_toBaselineOf="@+id/show_count"
-        app:layout_constraintEnd_toStartOf="@+id/show_count"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
@@ -66,6 +64,6 @@
         app:layout_constraintBottom_toTopOf="@+id/button_count"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_toast"
-        android:onClick="Zero"/>
+        android:onClick="Zero" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
